@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+</head>
+<body>
+    <h1>Image Generator</h1>
+    <form id="promptForm">
+        <label for="prompt">Enter your prompt:</label>
+        <input type="text" id="prompt" name="prompt" required>
+        <button type="submit">Generate</button>
+    </form>
+    <div id="result">
+        <img id="generatedImage" src="" alt="Generated Image" style="display:none; max-width:100%;">
+    </div>
+    
+    <!-- JavaScriptファイルを読み込む -->
+    <script src="script.js"></script>
+</body>
+</html>
