@@ -1,23 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Generator</title>
-</head>
+    <link rel="stylesheet" href="./style.css">
+
+    <!--フォント指定-->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+
+    
+    <style>
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-around;
+        }
+        .image-container img {
+            width: 200px;
+            height: auto;
+        } 
+        .bungee-tint {
+            font-family: 'Bungee Tint', cursive;
+        }
+    </style>
 <body>
     <h1>Image Generator</h1>
+
     <form id="promptForm">
+
         <label for="prompt">Enter your prompt:</label>
         <p>"sks irasutoya,"からプロンプトを入力してください</p>
+
+        <!--プロンプト入力欄-->
         <input type="text" id="prompt" name="prompt" required>
+
+        <!--送信-->
         <button type="submit">Generate</button>
     </form>
+
     <div id="result">
         <img id="generatedImage" src="" alt="Generated Image" style="display:none; max-width:100%;">
     </div>
     
     <!-- JavaScriptファイルを読み込む -->
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
