@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayasupe</title>
+    <link rel="stylesheet" href="bayasupe1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+    <script src="bayasupe1.js" defer></script>
+    <style>
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-around;
+        }
+        .image-container img {
+            width: 200px;
+            height: auto;
+        } 
+        .bungee-tint {
+            font-family: 'Bungee Tint', cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <h1 class="bungee-tint"><ruby>Bayasupe<rt>バヤスぺ</rt></ruby></h1>
+        <dd>
+            <dt style="color:aliceblue">欲しい画像の説明を入力し生成ボタンを押すと画像生成できます。</dt> 
+            <p style="color:aliceblue">128,512,1024は画像サイズです。</p>
+            <p style="color:aliceblue">例</p>
+            <img id="example" src="" alt="example">
+        </dd>
+        <dt>
+            <input type="text" id="prompt" placeholder="画像の説明を入力してください">
+            <button id="generate-button">画像生成</button>
+        </dt>
+    </div>
+    <br>
+    <button onclick="resizeImages('small')">128px</button>
+    <button onclick="resizeImages('medium')">512px</button>
+    <button onclick="resizeImages('large')">1024px</button>
+
+    <div class="image-container">
+        <div>
+            <img id="image1" src="img2/neko.jpg" alt="Sample Image 1" width="300">
+            <br>
+            <a id="downloadLink1" href="img2/neko.jpg" download="downloaded_image1.jpg">画像1をダウンロード</a>
+        </div>
+        <div>
+            <img id="image2" src="img2/neko.jpg" alt="Sample Image 2" width="300">
+            <br>
+            <a id="downloadLink2" href="img2/neko.jpg" download="downloaded_image2.jpg">画像2をダウンロード</a>
+        </div>
+        <div>
+            <img id="image3" src="img2/neko.jpg" alt="Sample Image 3" width="300">
+            <br>
+            <a id="downloadLink3" href="img2/neko.jpg" download="downloaded_image3.jpg">画像3をダウンロード</a>
+        </div>
+    </div>
+
+</body>
+</html>

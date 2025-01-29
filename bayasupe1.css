@@ -1,0 +1,15 @@
+body dt{
+    text-align: center;
+}
+body input{
+    width:500px;
+}
+
+body {
+    background: linear-gradient(to right, black, rgb(215, 215, 215)
+    ); /* 左から右に色が変化 */
+}
+
+body h1 {
+    font-size: 60px;
+}
