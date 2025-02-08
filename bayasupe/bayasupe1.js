@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const prompt = document.getElementById('prompt').value;
 
         // urlのあとに /generateつけてね
-        const apiUrl = 'https://f7f1-34-87-118-3.ngrok-free.app/generate'; // Colabの公開URLに置き換える
+        const apiUrl = 'https://6d07-34-125-91-1.ngrok-free.app/generate'; // Colabの公開URLに置き換える
 
         try {
             const response = await fetch(apiUrl, {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             const data = await response.json();
-            const imageUrl = `https://f7f1-34-87-118-3.ngrok-free.app/${data.image_url}`;
+            const imageUrl = `https://6d07-34-125-91-1.ngrok-free.app/${data.image_url}`;
 
             // 生成された画像を表示
             const imgElement = document.getElementById('generatedImage');
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ダウンロードリンクの設定
-    //const downloadLink = document.getElementById('downloadLink');
-    //downloadLink.href = imageUrl; // 画像の URL を設定
-    //downloadLink.download = 'downloadedImage.jpg'; // ダウンロード時のファイル名を指定
-    //downloadLink.style.display = 'block'; // リンクを表示
+    const downloadLink = document.getElementById('downloadlink');
+    downloadLink.href = imageUrl; // 画像の URL を設定
+    downloadLink.download = 'downloadedImage.jpg'; // ダウンロード時のファイル名を指定
+    downloadLink.style.display = 'block'; // リンクを表示
 
 
     function resizeImages(size) {
