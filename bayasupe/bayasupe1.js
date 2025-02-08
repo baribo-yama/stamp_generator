@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('promptForm').addEventListener('submit', async (e) => {
         e.preventDefault();
-    
+
         const prompt = document.getElementById('prompt').value;
-    
+
         // urlのあとに /generateつけてね
-        const apiUrl = 'https://3c6a-35-198-255-38.ngrok-free.app/generate'; // Colabの公開URLに置き換える
-    
+        const apiUrl = 'https://f7f1-34-87-118-3.ngrok-free.app/generate'; // Colabの公開URLに置き換える
+
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',
@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     cols: 3
                 })
             });
-    
+
             if (!response.ok) {
                 throw new Error('Failed to generate image.');
             }
-    
+
             const data = await response.json();
-            const imageUrl = `https://3c6a-35-198-255-38.ngrok-free.app/${data.image_url}`;
-            
+            const imageUrl = `https://f7f1-34-87-118-3.ngrok-free.app/${data.image_url}`;
+
             // 生成された画像を表示
             const imgElement = document.getElementById('generatedImage');
             imgElement.src = imageUrl;
@@ -36,7 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Error generating image. Please try again.');
         }
     });
-    
+
+    // ダウンロードリンクの設定
+    //const downloadLink = document.getElementById('downloadLink');
+    //downloadLink.href = imageUrl; // 画像の URL を設定
+    //downloadLink.download = 'downloadedImage.jpg'; // ダウンロード時のファイル名を指定
+    //downloadLink.style.display = 'block'; // リンクを表示
+
 
     function resizeImages(size) {
         const images = document.querySelectorAll('.image-container img');
@@ -60,12 +66,12 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = 1; i <= 3; i++) {
             let image = document.getElementById(`image${i}`);
             let link = document.getElementById(`downloadLink${i}`);
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 link.href = image.src;
                 link.download = `downloaded_image${i}.jpg`;
             });
         }
     }
 
-    setupDownloadLinks();
+
 });
