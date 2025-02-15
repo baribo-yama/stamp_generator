@@ -1,15 +1,42 @@
-body dt{
-    text-align: center;
+body dt {
+  text-align: center;
 }
-body input{
-    width:500px;
+body input {
+  width: 500px;
 }
 
 body {
-    background: linear-gradient(to right, black, rgb(215, 215, 215)
-    ); /* 左から右に色が変化 */
+  background: linear-gradient(
+    to right,
+    black,
+    rgb(215, 215, 215)
+  ); /* 左から右に色が変化 */
 }
 
 body h1 {
-    font-size: 60px;
+  font-size: 60px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+body{
+    vertical-align:middle; 
+    padding: 50px 0;
+    text-align: center;
 }

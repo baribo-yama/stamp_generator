@@ -32,8 +32,8 @@
         <h1 class="bungee-tint"><ruby>Bayasupe<rt>バヤスぺ</rt></ruby></h1>
         <dd>
             <dt style="color:aliceblue">欲しい画像の説明を入力し生成ボタンを押すと画像生成できます。</dt> 
-            <p style="color:aliceblue">128,512,1024は画像サイズです。</p>
-            <p style="color:aliceblue">例</p>
+            <p style="color:aliceblue">いらすとや風のおばあちゃんを生成できます</p>
+            <p style="color:aliceblue">画像生成後に画像の下のボタンからダウンロードができます</p>
             <img id="example" src="" alt="example">
         </dd>
 
@@ -52,11 +52,13 @@
     </div>
 
     <!--生成した画像を引っ張ってきて表示-->
-    <div id="result">
+    <div id="result" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
         <img id="generatedImage" src="" alt="Generated Image" style="display:none; max-width:100%;">
         <!--ダウンロードリンク-->
-        <a id="downloadlink" href="#" download="downloadImage.jpg" style="display:none;">ダウンロード</a> 
+        <a id="downloadlink" href="#" download="downloadImage.jpg" style="display:none;" class="download-button">ダウンロード</a> 
     </div>
+    
+    
 
     <!-- 画像サイズ変更ボタン-->
     <br>
